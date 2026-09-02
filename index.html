@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>The Nail Canvas - Luxury 3D Discount Wheel</title>
+  
+  <!-- Security Headers (CSP) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  
+  <!-- Luxury Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="mobile-optimized">
+  <!-- Ambient Gold Glow Effect -->
+  <div class="ambient-glow"></div>
+
+  <!-- Salon Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-logo-icon" title="The Nail Canvas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 3h12l4 6-10 12L2 9z"></path>
+        </svg>
+      </div>
+      <div class="brand-titles">
+        <h1>The Nail Canvas</h1>
+        <p>Luxury Nail Studio</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Audio Toggle -->
+      <button id="btnAudioToggle" class="icon-btn" title="Toggle Sound" aria-label="Toggle Sound">
+        <svg id="iconVolumeOn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <svg id="iconVolumeMute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+      </button>
+
+      <!-- Staff / Owner Lock Button -->
+      <button id="btnStaffPanel" class="icon-btn" title="Salon Staff Panel" aria-label="Staff Panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Hero & Wheel Showcase -->
+  <main class="wheel-main-container">
+    <div class="hero-text-banner">
+      <span class="luxury-badge">✦ Lucky Draw Wheel ✦</span>
+      <h2 class="hero-title">Tap Center to Spin</h2>
+      <p class="hero-subtitle">Every customer wins guaranteed 10% to 50% discount!</p>
+    </div>
+
+    <!-- 3D Wheel Viewport with Center SPIN Button -->
+    <div class="wheel-stage-wrapper">
+      <div id="threeContainer" class="canvas-container">
+        <!-- Center Interactive SPIN Button -->
+        <button type="button" id="btnCenterSpin" class="btn-center-spin" aria-label="Spin Wheel">
+          <span class="spin-ring-glow"></span>
+          <span class="spin-ring-pulse"></span>
+          <div class="spin-content">
+            <svg class="center-sparkle" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+            </svg>
+            <span class="spin-label">SPIN</span>
+          </div>
+        </button>
+      </div>
+      <div class="pedestal-shadow"></div>
+    </div>
+
+    <!-- Salon Promotion Pill (Customer facing - secret criteria kept hidden) -->
+    <div class="bottom-status-card">
+      <div class="status-pill-left">
+        <span class="pulse-dot"></span>
+        <span class="cycle-text">Daily Lucky Draw</span>
+      </div>
+      <div class="status-hint-text">
+        Valid on all Gel Nails, Extensions &amp; Art
+      </div>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p class="footer-copy">&copy; The Nail Canvas &bull; All Rights Reserved</p>
+      <div class="footer-credits">
+        <span class="credit-text">Made with ❤️ by <strong>Shuvankar</strong></span>
+        <div class="footer-social-icons">
+          <a href="mailto:kgp.shuvankar112@gmail.com" class="footer-icon-btn" title="Email: kgp.shuvankar112@gmail.com" aria-label="Send Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       WINNER VOUCHER MODAL
+       ========================================================================== -->
+  <div id="winnerModal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="voucher-card">
+      <h3 class="voucher-shop-name">The Nail Canvas</h3>
+      <p class="voucher-congrats">Congratulations on Your Win!</p>
+
+      <div class="voucher-prize-display">
+        <div id="winnerDiscountAmount" class="prize-number">50%</div>
+        <div id="winnerPrizeSub" class="prize-sub">DISCOUNT APPLIED</div>
+      </div>
+
+      <div class="voucher-details-grid">
+        <div class="vd-item">
+          <span class="vd-label">Discount</span>
+          <span id="vdDiscountText" class="vd-val">50% OFF</span>
+        </div>
+        <div class="vd-item">
+          <span class="vd-label">Valid Until</span>
+          <span class="vd-val">Today Only</span>
+        </div>
+      </div>
+
+      <div class="voucher-actions">
+        <button id="btnNextCustomer" class="btn-next-customer" type="button" style="width: 100%; padding: 0.9rem; font-size: 1rem;">Spin Again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STAFF / ADMIN MODAL
+       ========================================================================== -->
+  <div id="adminModal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="admin-card">
+      <div class="admin-header">
+        <h2>Salon Management Panel</h2>
+        <button id="btnCloseAdmin" class="btn-close-modal" type="button" aria-label="Close">&times;</button>
+      </div>
+
+      <!-- PIN verification step -->
+      <div id="adminPinView" class="pin-view">
+        <p>Enter 4-Digit Staff PIN:</p>
+        <input type="password" id="adminPinInput" class="pin-input" maxlength="4" placeholder="••••" autocomplete="off">
+        <button id="btnUnlockAdmin" class="btn-modal-unlock" type="button">Unlock</button>
+        <p id="pinError" style="color: #ef4444; font-size: 0.8rem; margin-top: 0.8rem; display: none;">Invalid PIN. Access denied.</p>
+      </div>
+
+      <!-- Authenticated Dashboard -->
+      <div id="adminDashboardView" style="display: none;">
+        <!-- Live statistics -->
+        <div class="admin-stats-grid">
+          <div class="stat-box">
+            <div id="statTotalSpins" class="stat-val">0</div>
+            <div class="stat-lbl">Total Customer Spins</div>
+          </div>
+          <div class="stat-box">
+            <div id="statCurrentCycle" class="stat-val">0 / 10</div>
+            <div class="stat-lbl">Current Round</div>
+          </div>
+          <div class="stat-box">
+            <div id="statNextJackpotIn" class="stat-val" style="color: #4ade80;">10</div>
+            <div class="stat-lbl">Spins to 40%/50%</div>
+          </div>
+          <div class="stat-box">
+            <div id="statTotalHighWins" class="stat-val" style="color: #FFDF78;">0</div>
+            <div class="stat-lbl">Mega Jackpots Won</div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="admin-controls-card">
+          <div class="ctrl-group">
+            <span style="font-size: 0.85rem; color: var(--gold-light);">Jackpot Rule:</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Every 10th customer gets 40% or 50%</span>
+          </div>
+          <div class="ctrl-group">
+            <button id="btnForceJackpot" class="ctrl-btn" type="button">Force Jackpot Next Spin</button>
+            <button id="btnResetCycle" class="ctrl-btn btn-danger" type="button">Reset Counter to 0</button>
+            <button id="btnExportCsv" class="ctrl-btn" type="button">Export Log (CSV)</button>
+          </div>
+        </div>
+
+        <!-- History Log Table -->
+        <div class="history-section">
+          <h3>
+            <span>Customer Spin Log</span>
+            <span id="historyCountBadge" style="font-size: 0.75rem; color: var(--text-muted);">0 Records</span>
+          </h3>
+          <div class="table-wrapper">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Discount</th>
+                  <th>Voucher Code</th>
+                  <th>Time</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="historyTableBody">
+                <!-- Populated safely via textContent -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entry Script -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
